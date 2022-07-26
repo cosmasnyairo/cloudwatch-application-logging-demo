@@ -1,0 +1,16 @@
+[
+  {
+    "productid": "1",
+    "quantity": "2",
+    "totalprice": "8,000",
+    "discountcodes": "20FOR20",
+    "date": "August 10, 2022"
+  },
+  {
+    "productid": "4",
+    "quantity": "10",
+    "totalprice": "2,000",
+    "discountcodes": "50OFFERNOW",
+    "date": "August 11, 2022"
+  }
+]

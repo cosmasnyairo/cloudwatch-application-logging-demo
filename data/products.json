@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "mouse",
+    "description": "Wireless and has rgb",
+    "rating": "4.6",
+    "price": "4,000",
+    "stockquantity": "30"
+  },
+  {
+    "id": "2",
+    "name": "Bag",
+    "description": "Leather Backpack and has large storage",
+    "rating": "4.0",
+    "price": "2000",
+    "stockquantity": "10"
+  },
+  {
+    "id": "3",
+    "name": "Phone case",
+    "description": "Phone case to prevent screen damage",
+    "rating": "3.2",
+    "price": "150",
+    "stockquantity": "2"
+  },
+  {
+    "id": "4",
+    "name": "Notebook",
+    "description": "96 page notebook",
+    "rating": "2.0",
+    "price": "200",
+    "stockquantity": "30"
+  }
+]

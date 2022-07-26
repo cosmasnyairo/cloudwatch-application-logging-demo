@@ -1,0 +1,16 @@
+[
+  {
+    "name": "20% Off select items",
+    "productid": "4",
+    "discount": "20",
+    "discountcode": "20FOR20",
+    "datevalid": "August 10, 2022"
+  },
+  {
+    "name": "50% Off select items",
+    "productid": "2",
+    "discount": "50",
+    "discountcode": "50OFFERNOW",
+    "datevalid": "August 11, 2022"
+  }
+]
