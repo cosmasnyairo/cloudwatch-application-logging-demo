@@ -16,9 +16,9 @@ class App:
         self.discountpath = 'data/discount.json'
         self.orderspath = 'data/order.json'
 
-        # self.get_products()
-        # self.get_cart()
-        # self.get_discounts()
+        self.get_products()
+        self.get_cart()
+        self.get_discounts()
         self.get_orders()
 
     def get_products(self):
@@ -32,7 +32,7 @@ class App:
                     product['price'],
                     product['stockquantity'],
                 ) for product in json.load(json_file)]
-                print(products, "\n")
+                return(products, "\n")
 
     def get_cart(self):
         if os.path.exists(self.cartpath):
@@ -44,7 +44,7 @@ class App:
                     cartitem['discountcodes'],
                     cartitem['date'],
                 ) for cartitem in json.load(json_file)]
-                print(cart, "\n")
+                return(cart, "\n")
 
     def get_discounts(self):
         if os.path.exists(self.discountpath):
@@ -56,7 +56,7 @@ class App:
                     discount['discountcode'],
                     discount['datevalid'],
                 ) for discount in json.load(json_file)]
-                print(discounts, "\n")
+                return(discounts, "\n")
 
     def get_orders(self):
         if os.path.exists(self.orderspath):
