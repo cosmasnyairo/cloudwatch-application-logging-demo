@@ -1,9 +1,0 @@
-[
-  {
-    "orderid": "12",
-    "totalprice": "10000",
-    "productids": ["1", "4"],
-    "discountcodes": ["20FOR20,50OFFERNOW"],
-    "date": "August 12, 2022"
-  }
-]
