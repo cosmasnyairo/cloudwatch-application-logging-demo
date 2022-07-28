@@ -26,5 +26,19 @@
         "description": "96 page notebook",
         "price": 200,
         "stockquantity": 30
+    },
+    {
+        "description": "test",
+        "name": "test",
+        "price": 20,
+        "stockquantity": 30,
+        "productid": 6
+    },
+    {
+        "description": "test",
+        "name": "test",
+        "price": 20,
+        "stockquantity": 30,
+        "productid": 6
     }
 ]

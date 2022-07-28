@@ -1,16 +1,16 @@
 [
     {
-        "productid": 1,
-        "quantity": 2,
-        "totalprice": 8000,
-        "discountcodes": "20FOR20",
-        "date": "August 10, 2022"
-    },
-    {
         "productid": 4,
         "quantity": 10,
         "totalprice": 2000,
         "discountcodes": "50OFFERNOW",
         "date": "August 11, 2022"
+    },
+    {
+        "productid": 1,
+        "quantity": 12,
+        "totalprice": 48000,
+        "discountcodes": "KFDKSF",
+        "date": "July 28, 2022"
     }
 ]
