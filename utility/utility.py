@@ -1,3 +1,4 @@
+from cgitb import reset
 import json
 import json
 import boto3
@@ -7,8 +8,8 @@ import logging
 import inspect
 
 client = boto3.client('logs', region_name="eu-west-1")
-loggroup = 'newtest'
-logstream = 'teststream1'
+loggroup = 'storelogs'
+logstream = 'storelogslogstream'
 
 
 def writetofile(filepath, templist, data):
@@ -61,10 +62,11 @@ def sequenceToken():
 
 
 def sendlogstocloudwatch(loglevel, temp, details):
+    testsendlogs()
     token = sequenceToken()
     logmessage = {
-        "loglevel ": loglevel,
-        "functioncalled": "%s()" % inspect.stack()[1].function ,
+        "loglevel": loglevel,
+        "functioncalled": "%s" % inspect.stack()[1].function ,
         "details": details,
         "output": temp
     }
@@ -82,3 +84,20 @@ def sendlogstocloudwatch(loglevel, temp, details):
     client.put_log_events(**log_event)
     print("Logs for %s() function call sent successfully" %
           inspect.stack()[1].function)
+
+def testsendlogs():
+    log_event = {
+        'logGroupName': loggroup,
+        'logStreamName': logstream,
+          'logEvents': [
+                {
+                    'timestamp': int(round(time.time() * 1000)),
+                    'message': json.dumps("initial logs"),
+                },
+        ],
+    }
+    try:
+        response = client.put_log_events(**log_event)
+        print (response[0]['uploadSequenceToken'])
+    except:
+        return
