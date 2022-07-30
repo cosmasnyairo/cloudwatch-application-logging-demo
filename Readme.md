@@ -88,4 +88,4 @@ graph LR;
 ``` 
 
 ### Requirements
-- [Requirements.txt](requirements.txt) file contains all the packages that were used in creating of the blockchain and the api
+- [Requirements.txt](requirements.txt) file contains all the packages that were used in creating of the store demo

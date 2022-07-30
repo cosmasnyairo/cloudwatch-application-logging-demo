@@ -66,7 +66,7 @@ def sendlogstocloudwatch(loglevel, temp, details):
     token = sequenceToken()
     logmessage = {
         "loglevel": loglevel,
-        "demoaction": "%s" % inspect.stack()[1].function ,
+        "storedemoaction": "%s" % inspect.stack()[1].function ,
         "details": details,
         "output": temp
     }
