@@ -7,7 +7,6 @@ Demo store to showcase logging to a file and to cloudwatch
 - [Product Module](#product-module)
 - [Discount Module](#discount-module)
 - [Cart Module](#cart-module)
-- [Utility Module](#utility-module)
 - [Requirements](#requirements)
 
 ### Product Module:
