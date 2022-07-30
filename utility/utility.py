@@ -8,8 +8,8 @@ import logging
 import inspect
 
 client = boto3.client('logs', region_name="eu-west-1")
-loggroup = 'storelogs'
-logstream = 'storelogslogstream'
+loggroup = 'storelogs-dryrun1'
+logstream = 'store-logstream-dryrun1'
 
 
 def writetofile(filepath, templist, data):
@@ -66,7 +66,7 @@ def sendlogstocloudwatch(loglevel, temp, details):
     token = sequenceToken()
     logmessage = {
         "loglevel": loglevel,
-        "functioncalled": "%s" % inspect.stack()[1].function ,
+        "demoaction": "%s" % inspect.stack()[1].function ,
         "details": details,
         "output": temp
     }

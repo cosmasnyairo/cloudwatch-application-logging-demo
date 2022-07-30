@@ -15,7 +15,7 @@ class Store:
         self.products = []
         self.cart = []
         self.discounts = []
-        self.FileLogging = False
+        self.FileLogging = True
 
     def getproductbyid(self, productid):
         self.getproducts()
@@ -100,6 +100,7 @@ class Store:
               logtoFile( 'INFO', data)
         else: sendlogstocloudwatch('INFO', data, "items were added to cart")
         return data
+ 
     def removefromcart(self,productid):
         cart = []
         cart = readfromfile(self.cartpath, cart)
@@ -107,8 +108,7 @@ class Store:
         if self.FileLogging:
               logtoFile( 'WARNING', productid)
         else: sendlogstocloudwatch('WARNING', productid, " Product id %s was removed from cart" % productid)
-    
-    
+        
     def get_discounts(self):
         if os.path.exists(self.discountpath):
             with open(self.discountpath) as json_file:
@@ -137,6 +137,7 @@ class Store:
               logtoFile('INFO', data)
         else: sendlogstocloudwatch('INFO', data, "Discount code was added")
         return data
+   
     def removediscounts(self, productid):
         discount = []
         discount = readfromfile(self.discountpath, discount)
